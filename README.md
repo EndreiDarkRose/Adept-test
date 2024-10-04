@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# Тестовое задание: Виртуализация списка с добавлением и удалением строк
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Данное тестовое задание включает реализацию одностраничного приложения на React с использованием Redux Toolkit и TypeScript. Основная цель — создать таблицу с виртуализированным списком, поддерживающую добавление новых элементов и удаление выбранных строк.
 
-## Available Scripts
+## Стек технологий
 
-In the project directory, you can run:
+React — библиотека для построения пользовательских интерфейсов.
+Redux Toolkit — управление состоянием приложения.
+TypeScript — строгая типизация для предотвращения ошибок на этапе разработки.
+react-window — виртуализация списка для оптимизации рендеринга.
+Sass — стилизация компонентов.
 
-### `npm start`
+### Установка и запуск проекта
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Клонирование репозитория:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+git clone https://github.com/EndreiDarkRose/Adept-test
+cd adept
+```
 
-### `npm test`
+### Установка зависимостей:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Выполните команду для установки всех необходимых пакетов:
 
-### `npm run build`
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Запуск приложения:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Для запуска приложения в режиме разработки используйте команду:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run start
+```
 
-### `npm run eject`
+### Структура проекта
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+src/
+│
+├── app/
+│   ├── features/
+│   │   ├── company/           # Модуль управления компаниями
+│   │   │   ├── components/    # Компоненты, связанные с компаниями
+│   │   │   │   ├── CompanyTable.tsx
+│   │   │   │   ├── CompanyRow.tsx
+│   │   │   │   └── CompanyForm.tsx
+│   │   │   ├── ui/            # UI компоненты
+│   │   │   │   └── ControlPanel.tsx
+│   │   │   └── redux/         # Redux Slice и хранилище
+│   │   │       ├── companySlice.ts  # Redux Slice для управления компаниями
+│   │   │       ├── store.ts         # Конфигурация Redux store
+│   │   │       └── types.ts         # Типы данных для модуля компаний
+│   │   └── helpers/          # Вспомогательные функции и данные
+│   │       └── initialCompanies.ts  # Начальные данные для компаний
+│
+├── App.scss               # Основные стили приложения
+├── App.tsx                # Главный компонент приложения
+├── index.css              # Глобальные стили приложения
+├── index.tsx              # Входная точка приложения
+├── react-app-env.d.ts     # Определения окружения для TypeScript
+├── logo.svg               # Логотип приложения
+│
+├── .gitignore             # Игнорируемые файлы Git
+├── package-lock.json      # Лок-файл зависимостей npm
+├── package.json           # Метаданные и зависимости проекта
+├── tsconfig.json          # Конфигурация TypeScript
+└── README.md              # Документация проекта
+```

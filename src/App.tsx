@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
 import CompanyTable from "./app/features/company/components/CompanyTable";
 import CompanyForm from "./app/features/company/components/CompanyForm";
