@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateCompany, toggleSelect } from "../../redux/companySlice";
-import { Company } from "../../types";
+import { updateCompany, toggleSelect } from "../../../redux/companySlice";
+import { Company } from "../../../types";
 
 type CompanyRowProps = {
   company: Company;

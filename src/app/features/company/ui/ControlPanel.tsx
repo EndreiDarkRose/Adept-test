@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeCompanies } from "../../redux/companySlice";
+import { removeCompanies } from "../../../redux/companySlice";
 
 const ControlPanel: React.FC = () => {
   const dispatch = useDispatch();
