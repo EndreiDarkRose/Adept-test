@@ -4,10 +4,9 @@
 
 ## Github Pages
 
-Демо просмотра приложения
-```
-https://endreidarkrose.github.io/Adept-test/
-```
+Демо просмотра приложения:
+<https://endreidarkrose.github.io/Adept-test/>
+
 ## Стек технологий
 
 React — библиотека для построения пользовательских интерфейсов.
